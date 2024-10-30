@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><a href="/">HOME</a></div>
+    <h1>{{ post.title }}</h1>
+    <div>
+        <p>{{ post.content }}</p>
+    </div>
+    <div><b>Comments</b></div>
+    <div>
+        {% for comment in post.comments %}
+        <div class="comment">
+            <p>#{{ comment.id }}</p>
+            <p>{{ comment.content }}</p>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
